@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body > header{
+    background-color: rgb(0, 0, 0);
+    padding:16px;
+
+}
+header .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1{
+    color: white;
+}
+header li{
+    display:inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left:20px ;
+}
+header li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.container{
+    width: 1366px;
+    margin: 0 auto;
+}
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.articles article{
+    width: 30%;
+}
+.articles article img{
+/* height: 180px; */
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+  
+}
+
+
+.articles article p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    padding: 16px 0;
+}
+
+section h2{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+section h2, .articles article{
+    margin-bottom: 16px;
+}
+.articles article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+.articles article a{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+
+#esporte{
+    background-color:rgba(5, 82, 18, 0.2);
+}
+
+#economia{
+    background-color:rgb(13, 5, 82, 0.2);
+}
+
+
+#entrete{
+    background-color:rgba(28, 55, 173, 0.6);
+}
+
+#tecnologia{
+    background-color:rgba(82, 5, 5, 0.6);
+}
+
+#entrete a{
+    background-color: rgb(0, 14, 145);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+
+
+
+#tecnologia a{
+    background-color: rgb(253, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
