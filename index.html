@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML com JS</title>
+    <link rel="stylesheet" href="./main.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Campos A e B</h1>
+        <p>Para validar esse formulario, digite um numero no campo A e, no campo B, digite um numero maior do que o do campo A</p>
+        <form id='camposAB'>
+            <label for="a">Campo A</label>
+            <input  id='campo-a' type="number" required placeholder="Digite um numero" />
+            <label for="a">Campo B</label>
+                <p class="error-message">ERRRADO</p>
+            <input  id='campo-b' type="number" required placeholder="Digite um numero maior do que o do campo A" />
+            <label for="descricao">Teve dificuldade?</label>
+            <textarea placeholder="Descrição (opcional)"></textarea>
+            <button id='btn-verificar' type="submit">Verificar</button>
+        </form>
+        <p class="sucess-message">CERTO</p>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
