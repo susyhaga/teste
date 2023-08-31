@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Agenda de tarefas</h1>
+        <button type="button">Nova tarefa+</button>
+        <button id="limpar" type="button">Limpar lista</button>
+    </header>
+    <form>
+        <h2>Inserir tarefas</h2>
+        <input type="text" id="nova-tarefa"required placeholder="Nome da tarefa">
+        <button type="submit" id="adiciona">Adicionar</button>
+        <button type="reset" id="botao-remover">Remover</button>
+    </form>
+    <ul>
+        <li>
+            <div class="line-through">
+                <p ></p>
+            </div>
+        </li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
