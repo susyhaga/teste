@@ -18,14 +18,16 @@ header button{
 }
 
 #limpar{
- background-color: red;
+    background-color: red;
 }
+
 form{
     background-color: #ffffff;
     padding: 24px 0;
     text-align: center;
     display: none;
 }
+
 form h2{
     margin-bottom: 16px;
 }
@@ -33,6 +35,7 @@ form h2{
 input,button{
     padding: 12px;
 }
+
 button{
     background-color: #009432;
     border:none;
@@ -41,21 +44,23 @@ button{
     text-transform: uppercase;
     color: #ffff;
 }
+
 #botao-remover{
     background-color: red;
 }
+
 ul{
     background-color: #ffffff;
 }
+
 ul li{
     font-size: 34px;
     font-weight: bold;
     position: relative;
     text-align: center;
     cursor: pointer;
-    
-
 }
 
-
-
+.tarefa li{
+    list-style: disc inside;
+}
