@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     $("[name=nome]").keyup(function () { 
-    	var $this = $( this ); //armazeno o ponteiro em uma variavel
-		    var valor = $this.val().replace(/[^a-z0-9 ]+/gi,'');
-		    while (valor.indexOf('  ') != -1) valor = valor.replace('  ', ' ');
-		    $this.val( valor );
+    	let $this = $( this ); //armazeno o ponteiro em uma variavel
+		let valor = $this.val().replace(/[^a-z0-9 ]+/gi,'');
+		while (valor.indexOf('  ') != -1) valor = valor.replace('  ', ' ');
+		$this.val( valor );
     });
     
-    $('#telefone').mask('(00)00000-0000');
+    $('#tel').mask('(00)00000-0000');
     $('#cpf').mask('000.000.000-00');
     $('#cep').mask("00.000-000");
     
@@ -15,7 +15,7 @@ $(document).ready(function(){
     $('form').validate({
         rules:{
             nome:{
-                required:true
+                required:true,
 
             },
             email:{
@@ -23,14 +23,14 @@ $(document).ready(function(){
                 email:true
             },
             telefone:{
-                required:true
+                required:true,
             },
             cep:{
                 required:true,
             },
             cpf:{
                 required:true,
-                reverse: true
+            
             },
         },
         
@@ -41,11 +41,12 @@ $(document).ready(function(){
             cep:"Este campo é obrigatório",
             cpf:"Este campo é obrigatório",
         },
+
         submitHandler:function(form){
             console.log(form)
         },
         invalidHandler:function(eventos, validador){
-            let camposIncorretos= validador.numberOfInvalids();
+            let camposIncorretos = validador.numberOfInvalids();
             if(camposIncorretos){
                 alert(`Existe(m) ${camposIncorretos} campo(s) incorreto(s)`)
             }
@@ -54,6 +55,5 @@ $(document).ready(function(){
             }
         }
     })
-
     
 })
