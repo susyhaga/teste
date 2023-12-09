@@ -11,8 +11,8 @@ class Alunos {
     }
 }
 
-const alunos = ['Gustavo', 'Julia', 'Paula', 'Wagner'];
-const notas = [ 10, 4, 5, 9];
+const alunos = ['Susy Haga', 'Italo Unhaiser','Geleia Haga','Maria Francisca','George Haga'];
+const notas = [ 2, 10, 8, 5, 3];
 
 const nomesComNotas = alunos.map(function (nomeAtual) {
   //objeto literal
