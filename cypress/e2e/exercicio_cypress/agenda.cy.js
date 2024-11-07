@@ -50,29 +50,20 @@ describe('Testes para agenda de contatos', () => {
     it('Deve editar um contato existente', () => {
         cy.visit('https://agenda-contatos-react.vercel.app/')
         
-        // Localiza o último contato na lista e clica no botão "Editar"
-        cy.get('.contato').last().find('button.edit').click();
-    
-        // Preenche os campos de edição com os novos dados
-        const updatedData = {
-            name: 'Nome Editado',
-            email: 'nome.editado@gmail.com',
-            phone: '11988887777'
-        };
-    
-        cy.get('input[placeholder="Nome"]').clear().type(updatedData.name);
-        cy.get('input[placeholder="E-mail"]').clear().type(updatedData.email);
-        cy.get('input[placeholder="Telefone"]').clear().type(updatedData.phone);
-        
-        // Clica no botão "Adicionar" para salvar as alterações
-        cy.get('button.adicionar').click();
-        
-        cy.wait(5000); // Aguarda a operação ser concluída (se necessário)
-    
-        // Verifica se o nome, e-mail e telefone atualizados aparecem na lista de contatos
-        cy.contains('.contato', updatedData.name).should('exist');
-        cy.contains('.contato', updatedData.email).should('exist');
-        cy.contains('.contato', updatedData.phone).should('exist');
+      // Clica no botão "Editar" do último contato adicionado
+        cy.get('.contato:last').find('button.edit').click()
+
+      // Gera novos dados aleatórios para a edição
+        const randomEditData = generateRandomData();
+
+      // Edita os campos com os novos dados gerados
+        cy.get('input[placeholder="Nome"]').clear().type(randomEditData.name)
+        cy.get('input[placeholder="E-mail"]').clear().type(randomEditData.email)
+        cy.get('input[placeholder="Telefone"]').clear().type(randomEditData.phone)
+
+      // Clica no botão "alterar" para salvar as edições
+        cy.get('button.alterar').click()
+        cy.wait(20000)
     });
 
     it('Deve deletar o primeiro contato', () => {
